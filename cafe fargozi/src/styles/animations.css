@@ -1,0 +1,70 @@
+/* src/styles/animations.css */
+
+/* 1. CINEMATIC MASK REVEAL (Like 0:02 in the video) */
+@keyframes reveal-mask {
+  0% { clip-path: inset(0 100% 0 0); opacity: 0; }
+  100% { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+
+.reveal-image {
+  animation: reveal-mask 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+/* 2. SUBTLE PULSE FOR "LIVE STATUS" BADGE */
+@keyframes status-pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.animate-status-pulse {
+  animation: status-pulse 2s ease-in-out infinite;
+}
+
+/* 3. FLOATING AMBIENT MOTION (For decorative patterns) */
+@keyframes drift {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(10px, 15px) rotate(2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.animate-drift {
+  animation: drift 10s ease-in-out infinite;
+}
+
+/* 4. TEXT SHIMMER (For the Fargozi Gold accent) */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.text-shimmer {
+  background: linear-gradient(90deg, #EBA83A 25%, #FFF 50%, #EBA83A 75%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
+/* 5. SMOOTH TRANSITION FOR LINKS */
+.nav-link-underline {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: #C41E24;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 245, 245, 245;
+}
+
+body {
+  /* This sets the Fargozi Black background globally */
+  color: rgb(var(--foreground-rgb));
+  background-color: #0A0A0A;
+  
+  /* Smooth scrolling for that premium "Cinematic" feel */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- HELPER CLASSES --- */
+
+/* Hide scrollbar for a cleaner "App" feel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Glow effect for the Fargozi Red text */
+.text-glow-red {
+  text-shadow: 0 0 15px rgba(196, 30, 36, 0.4);
+}
+
+/* Custom Gradient for buttons */
+.fargozi-gradient {
+  background: linear-gradient(135deg, #C41E24 0%, #8A1418 100%);
+}
+
+/* Custom selection color (Matches Logo Red) */
+::selection {
+  background-color: #C41E24;
+  color: white;
+}
+
+/* Prevent body scroll when loader is active */
+body.loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Ensure the loader stays on top */
+#shawarma-loader-container {
+  pointer-events: none;
+}
