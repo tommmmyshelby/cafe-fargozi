@@ -27,7 +27,11 @@ export default function Footer() {
           {/* 1. BRAND SIGNATURE (PDF Page 2 & 10 Insights) */}
           <motion.div {...reveal} className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-4 mb-8 group">
-              <div className="w-12 h-12 bg-fargozi-red rounded-full flex items-center justify-center font-display font-bold text-xl transition-transform group-hover:rotate-[360deg] duration-700">F</div>
+              <img 
+                  src="/logo.png" 
+                  alt="Fargozi Logo" 
+                  className="h-10 object-contain"
+                />
               <span className="font-display text-2xl font-bold tracking-tighter uppercase">Fargozi+</span>
             </Link>
             <p className="text-fargozi-white/40 text-xs leading-relaxed mb-8 italic uppercase tracking-widest">
