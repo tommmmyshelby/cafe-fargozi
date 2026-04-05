@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   // ADD THIS LINE TO FORCE THE ICON:
   icons: {
     icon: '/logo.png', // Assuming icon.png is in your public folder
-    shortcut: '/icon.png',
-    apple: '/icon.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
   },
 };
 
