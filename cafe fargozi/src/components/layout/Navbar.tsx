@@ -47,7 +47,11 @@ export default function Navbar() {
             
             {/* LOGO */}
             <Link href="/" className="group flex items-center gap-3">
-              <div className="w-10 h-10 bg-fargozi-red rounded-full flex items-center justify-center font-display font-bold text-xl group-hover:rotate-[360deg] transition-all duration-700">F</div>
+              <img 
+    src="/logo.png" 
+    alt="Fargozi Logo" 
+    className="h-10 object-contain"
+  />
               <span className="font-display text-2xl font-bold tracking-tighter uppercase">Fargozi</span>
             </Link>
 
