@@ -23,10 +23,10 @@ export default function AdminSidebar() {
       {/* BRAND LOGO */}
       <div className="flex items-center gap-4 mb-16 px-2">
         <img 
-    src="/logo.png" 
-    alt="Fargozi Logo" 
-    className="h-10 object-contain"
-  />
+            src="/logo.png" 
+            alt="Fargozi Logo" 
+            className="h-10 object-contain"
+          />
         <span className="hidden lg:block font-display font-bold text-xl uppercase tracking-tighter">HQ</span>
       </div>
 

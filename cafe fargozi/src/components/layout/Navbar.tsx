@@ -48,10 +48,10 @@ export default function Navbar() {
             {/* LOGO */}
             <Link href="/" className="group flex items-center gap-3">
               <img 
-    src="/logo.png" 
-    alt="Fargozi Logo" 
-    className="h-10 object-contain"
-  />
+                  src="/logo.png" 
+                  alt="Fargozi Logo" 
+                  className="h-10 object-contain"
+                />
               <span className="font-display text-2xl font-bold tracking-tighter uppercase">Fargozi</span>
             </Link>
 
